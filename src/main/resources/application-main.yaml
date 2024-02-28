@@ -1,0 +1,11 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO-DB_URI}
+      database: ${MONGO-DB_DATABASE}
+
+
+jwt:
+  token:
+    expiration: ${JWT_TOKEN_EXPIRATION}
+    secret-key: ${JWT_TOKEN_SECRET-KEY}

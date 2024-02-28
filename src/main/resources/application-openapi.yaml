@@ -1,0 +1,23 @@
+spring:
+  main:
+    lazy-initialization: true
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+  configure:
+    include:
+      - com.agencyamazon.task.configuration.rest.OpenApiConfig
+      - com.agencyamazon.task.controller.**
+    exclude:
+      - com.agencyamazon.task.**
+    optional:
+      - com.agencyamazon.task.**
+
+springdoc:
+  api-docs:
+    path: /swagger/api-docs
+  swagger-ui:
+    path: /swagger/swagger-ui.html
